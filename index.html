@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./src/style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="outer-container">
+        <audio src="./src/audio/Shadmehr Aghili - Rabeteh.mp3" id="track"></audio>
+    </div>
+    <div class="player-container">
+        <img src="./src/img/Shadmehr-Aghili-Rabeteh img.jpg" alt="track-img" id="thumbnail">
+        <div class="box">
+            <div class="play-pause">
+                <i class="far fa-play-circle" id="play"></i>
+                <i class="far fa-pause-circle" id="pause"></i>
+            </div>
+            <div class="track-info">
+                <div id="track-artist">Shadmehr Aghili</div>
+                <div id="track-title">Rabeteh</div>
+            </div>
+            <div class="next-prev">
+                <i class="fas fa-step-forward" id="next-track"></i>
+                <i class="fas fa-step-backward" id="prev-track"></i>
+            </div>
+            <div class="progress-bar">
+                <input type="range" id="progressBar" min="0" max="" value="0">
+            </div>
+            <div class="track-time">
+                <div class="currentTime"></div>
+                <div class="durationTime"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

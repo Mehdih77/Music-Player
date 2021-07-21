@@ -1,0 +1,142 @@
+body {
+  background-color: #f7f7f7;
+}
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  height: 400px;
+  width: 325px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
+    0 8px 16px rgba(0, 0, 0, 0.11);
+}
+#thumbnail {
+  position: absolute;
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  top: -10%;
+  transition: 1s linear;
+  z-index: 3;
+}
+.box {
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  z-index: 4;
+  bottom: 10%;
+  display: grid;
+  grid-template-columns: 35px 255px 35px;
+  grid-template-rows: 85px 25px 25px;
+  grid-template-areas:
+    "one two two three"
+    "four four four four"
+    "five five five five";
+  column-gap: 10px;
+}
+.play-pause {
+  grid-area: one;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#pause {
+  display: none;
+  filter: invert(1);
+  cursor: pointer;
+}
+#play,
+#next-track,
+#prev-track {
+  filter: invert(1);
+  cursor: pointer;
+}
+.track-info {
+  grid-area: two;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5%;
+}
+#track-artist {
+  color: #fff;
+  /* font-family: ; */
+  font-size: 1.125rem;
+  text-shadow: 0 0 15px #fff;
+}
+#track-title {
+  color: #fff;
+  /* font-family: ; */
+  font-size: 1rem;
+}
+.next-prev {
+    grid-area: three;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.progress-bar{
+    grid-area: four;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#progressBar{
+    appearance: none;
+    height: 5px;
+    width: 58%;
+    background-color: #fff;
+    outline: none;
+    border-radius: 30px;
+}
+#progressBar::-webkit-slider-thumb{
+    appearance: none;
+    height: 11px;
+    width: 11px;
+    background-color: #fff;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.track-time{
+    grid-area: five;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#currentTime{
+    /* font-family: ; */
+    font-size: 1rem;
+    color: #fff;
+}
+#durationTime{
+    /* font-family: ; */
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 0 0 15px #fff;
+}
